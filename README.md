@@ -7,7 +7,3 @@
 3) Cucumber HTML Report.
 4) Cucumber.Json
 5) Cukes.xml
-
-- Kindly note that the HTML report, Json & cukes.xml files are included also in the Target Folder.
-
-Thanks for your time.
