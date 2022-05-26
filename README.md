@@ -10,7 +10,7 @@ Sub Domain: B2C (Business to Customer)
 
 Application: Online Shopping
 
-Application Type: Public Web Application (Internet Application) ([nopCommerece](https://demo.nopcommerce.com/)
+Application Type: Public Web Application (Internet Application) ([nopCommerece](https://demo.nopcommerce.com/))
 
 User Interface/Client side: To perform specified Business operations:
 Customer Registration, Customer Login,
