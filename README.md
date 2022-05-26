@@ -1,6 +1,6 @@
 # E-Commerce-App-Automation-Testing
 
-The Project requirements were to automate and generate a report for a created test plan for an e-commerce application to test all possible test scenarios.
+The Project requirements were to automate and generate a report for a created test plan for an e-commerce application to test all possible test scenarios using Selenium WebDriver & BDD Cucumber.
 
 # Project Summary:
 
