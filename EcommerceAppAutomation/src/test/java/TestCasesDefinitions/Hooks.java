@@ -5,6 +5,8 @@ import io.cucumber.java.BeforeAll;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 
 
 public class Hooks {
@@ -15,6 +17,7 @@ public class Hooks {
         WebDriverManager.chromedriver().setup();
      // Creating new driver from ChromeDriver & maximize window.
         driver = new ChromeDriver();
+
         driver.manage().window().maximize();
     }
 
@@ -22,6 +25,6 @@ public class Hooks {
     @AfterAll
     public static void chrome_browser_quits() throws InterruptedException {
         Thread.sleep(1000);
-        driver.quit();
+       // driver.quit();
     }
 }

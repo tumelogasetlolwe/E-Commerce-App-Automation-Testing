@@ -3,23 +3,41 @@ package nopCommercePages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import static TestCasesDefinitions.Hooks.driver;
+import Util.Utils;
+import nopCommercePages.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 
 public class P02_registration {
+Utils utils = new Utils();
 
     public String registerPageURL() {
-        return "https://demo.nopcommerce.com/register?returnUrl=%2F";
+        return "https://demo.nopcommerce.com/register";
     }
 
     public String registerPageResultURL() {
-        return "https://demo.nopcommerce.com/registerresult/1?returnUrl=/";
+        return "https://demo.nopcommerce.com/register";
     }
 
-    public WebElement maleCheckBox() {
-        By maleCheckBox = By.id("gender-male");
-        return driver.findElement(maleCheckBox);
+
+    public void humanCheckBox() {
+
+        By humanCheckBox = By.xpath("//*[@id=\"JStsl2\"]/div/label/input");
+        driver.findElement(humanCheckBox);
     }
+
+    public void maleCheckBox()  {
+       utils.sleep(10);
+        //driver.switchTo().frame((WebElement) By.xpath("//*[@id=\"JStsl2\"]/div/label/input"));
+
+       driver.findElement(By.xpath("//*[@id=\"JStsl2\"]/div/label/input")).click();
+
+
+    }
+
 
     public WebElement firstNameTxtFld() {
+
         By firstNameTxtFld = By.id("FirstName");
         return driver.findElement(firstNameTxtFld);
     }

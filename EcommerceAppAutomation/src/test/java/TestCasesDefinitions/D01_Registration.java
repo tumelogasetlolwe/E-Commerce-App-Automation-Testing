@@ -3,7 +3,8 @@ package TestCasesDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
-import nopCommercePages.P02_registration;
+import nopCommercePages.*;
+
 
 public class D01_Registration {
 P02_registration register = new P02_registration();
@@ -11,13 +12,14 @@ P02_registration register = new P02_registration();
     @And("user navigates to registration page.")
         public void user_navigates_to_registration_page() throws InterruptedException {
             Hooks.driver.navigate().to(register.registerPageURL());
-            Thread.sleep(2000);
+            Thread.sleep(5000);
         }
 
 
+
     @And("user press on male checkbox.")
-    public void user_press_on_male_checkbox() {
-        register.maleCheckBox().click();
+    public void user_press_on_male_checkbox() throws InterruptedException {
+        register.maleCheckBox();
         }
 
 

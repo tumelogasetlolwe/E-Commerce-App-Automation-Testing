@@ -1,46 +1,637 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testng-results failed="0" passed="15" skipped="0" total="15">
-<suite duration-ms="95652" name="io.cucumber.core.plugin.TestNGFormatter">
-<test duration-ms="95652" name="io.cucumber.core.plugin.TestNGFormatter">
-<class name="User could register with valid data">
-<test-method duration-ms="8548" finished-at="2022-04-26T02:04:41.605Z" name="user registers with valid data." started-at="2022-04-26T02:04:32.999Z" status="PASS"/>
-<test-method duration-ms="4787" finished-at="2022-04-26T02:04:46.441Z" name="user registers with invalid password." started-at="2022-04-26T02:04:41.649Z" status="PASS"/>
-</class>
-<class name="user should be able to login to the website.">
-<test-method duration-ms="6203" finished-at="2022-04-26T02:04:52.661Z" name="user login with valid data (valid email &amp; password)." started-at="2022-04-26T02:04:46.455Z" status="PASS"/>
-<test-method duration-ms="3279" finished-at="2022-04-26T02:04:55.962Z" name="user login with invalid data (invalid email &amp; password)." started-at="2022-04-26T02:04:52.683Z" status="PASS"/>
-</class>
-<class name="User could reset his/her password successfully">
-<test-method duration-ms="1441" finished-at="2022-04-26T02:04:57.427Z" name="user enters a valid registered email address." started-at="2022-04-26T02:04:55.986Z" status="PASS"/>
-<test-method duration-ms="1073" finished-at="2022-04-26T02:04:58.522Z" name="user enters invalid not registered email address." started-at="2022-04-26T02:04:57.446Z" status="PASS"/>
-</class>
-<class name="Logged User could search for any product">
-<test-method duration-ms="926" finished-at="2022-04-26T02:04:59.463Z" name="logged user should be able to search for any product." started-at="2022-04-26T02:04:58.536Z" status="PASS"/>
-</class>
-<class name="Logged User could switch between currencies US-Euro">
-<test-method duration-ms="6963" finished-at="2022-04-26T02:05:06.449Z" name="logged user should be able to change currency from US Dollars to Euro &amp; back." started-at="2022-04-26T02:04:59.474Z" status="PASS"/>
-</class>
-<class name="Logged user could select different Categories">
-<test-method duration-ms="2320" finished-at="2022-04-26T02:05:08.786Z" name="logged user could select category (Computers) then subcategory (Desktops)" started-at="2022-04-26T02:05:06.465Z" status="PASS"/>
-</class>
-<class name="Logged user could filter with color">
-<test-method duration-ms="1890" finished-at="2022-04-26T02:05:10.691Z" name="logged user could filter with red colour in Shoes Subcategory." started-at="2022-04-26T02:05:08.800Z" status="PASS"/>
-</class>
-<class name="Logged user could select different tags.">
-<test-method duration-ms="3119" finished-at="2022-04-26T02:05:13.825Z" name="logged user could select different tags." started-at="2022-04-26T02:05:10.704Z" status="PASS"/>
-</class>
-<class name="Logged user could add different products to Shopping cart.">
-<test-method duration-ms="15787" finished-at="2022-04-26T02:05:29.641Z" name="Logged user add 2 products to shopping cart" started-at="2022-04-26T02:05:13.849Z" status="PASS"/>
-</class>
-<class name="Logged user could add different products to Wishlist">
-<test-method duration-ms="13087" finished-at="2022-04-26T02:05:42.753Z" name="user adds two desktop products to his/her wishlist." started-at="2022-04-26T02:05:29.658Z" status="PASS"/>
-</class>
-<class name="Logged user could add different products to compare list">
-<test-method duration-ms="5758" finished-at="2022-04-26T02:05:48.531Z" name="Logged user could add 2nd and 3rd computer desktops to his/her compare list." started-at="2022-04-26T02:05:42.768Z" status="PASS"/>
-</class>
-<class name="Create successful Order">
-<test-method duration-ms="16559" finished-at="2022-04-26T02:06:05.118Z" name="Logged user could make a successful order." started-at="2022-04-26T02:05:48.551Z" status="PASS"/>
-</class>
-</test>
-</suite>
+<testng-results failed="15" passed="0" skipped="0" total="15">
+    <suite duration-ms="35979" name="io.cucumber.core.plugin.TestNGFormatter">
+        <test duration-ms="35979" name="io.cucumber.core.plugin.TestNGFormatter">
+            <class name="User could register with valid data">
+                <test-method duration-ms="16811" finished-at="2024-10-07T09:29:28.213550300Z" name="user registers with valid data." started-at="2024-10-07T09:29:11.373649100Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user navigates to registration page.....................................passed
+When user enters valid first name...........................................passed
+And user press on male checkbox.............................................failed
+And user enters valid last name.............................................skipped
+And user select valid date of birth.........................................skipped
+And user enters valid email address.........................................skipped
+And user enters valid password..............................................skipped
+And user reenter valid password.............................................skipped
+And user clicks on register button..........................................skipped
+Then user could register successfully.......................................skipped
+And user returned to register result webpage................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="JStsl2"]/div/label/input"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=xpath, value=//*[@id="JStsl2"]/div/label/input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P02_registration.maleCheckBox(P02_registration.java:33)
+	at TestCasesDefinitions.D01_Registration.user_press_on_male_checkbox(D01_Registration.java:22)
+	at ✽.user press on male checkbox.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F01-%20Registration.feature:11)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+                <test-method duration-ms="5402" finished-at="2024-10-07T09:29:33.658149200Z" name="user registers with invalid password." started-at="2024-10-07T09:29:28.255584200Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user navigates to registration page.....................................passed
+When user enters valid first name...........................................failed
+And user press on male checkbox.............................................skipped
+And user enters valid last name.............................................skipped
+And user select valid date of birth.........................................skipped
+And user enters valid email address.........................................skipped
+And user enters invalid password............................................skipped
+And user reenter invalid password...........................................skipped
+And user clicks on register button..........................................skipped
+Then user could not register successfully...................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#FirstName"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=id, value=FirstName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P02_registration.firstNameTxtFld(P02_registration.java:42)
+	at TestCasesDefinitions.D01_Registration.user_enters_valid_first_name(D01_Registration.java:28)
+	at ✽.user enters valid first name.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F01-%20Registration.feature:27)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="user should be able to login to the website.">
+                <test-method duration-ms="2330" finished-at="2024-10-07T09:29:36.022836Z" name="user login with valid data (valid email &amp; password)." started-at="2024-10-07T09:29:33.688545300Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And navigates to login page.................................................passed
+When user enters valid login email..........................................failed
+And user enters valid login password........................................skipped
+And user press on login button..............................................skipped
+Then user could login successfully..........................................skipped
+And returned to home page of the website....................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[class="email"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=input[class="email"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P03_login.loginEmailTxtFld(P03_login.java:17)
+	at TestCasesDefinitions.D02_Login.user_enters_valid_login_email(D02_Login.java:32)
+	at ✽.user enters valid login email.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F02-%20Login.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+                <test-method duration-ms="2363" finished-at="2024-10-07T09:29:38.405788200Z" name="user login with invalid data (invalid email &amp; password)." started-at="2024-10-07T09:29:36.038087900Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And navigates to login page.................................................passed
+When user enters invalid login email........................................failed
+And user enters invalid login password......................................skipped
+And user press on login button..............................................skipped
+Then user could not login successfully......................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[class="email"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=input[class="email"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P03_login.loginEmailTxtFld(P03_login.java:17)
+	at TestCasesDefinitions.D02_Login.user_enters_invalid_login_email(D02_Login.java:38)
+	at ✽.user enters invalid login email.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F02-%20Login.feature:22)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="User could reset his/her password successfully">
+                <test-method duration-ms="338" finished-at="2024-10-07T09:29:38.965600500Z" name="user enters a valid registered email address." started-at="2024-10-07T09:29:38.557113700Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user navigates to forget password webpage...............................passed
+When user enters a valid email address......................................failed
+And user press on recover button............................................skipped
+Then user could reset password successfully.................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[class="email"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=input[class="email"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P03_login.loginEmailTxtFld(P03_login.java:17)
+	at TestCasesDefinitions.D03_resetPassword.user_enters_a_valid_email_address(D03_resetPassword.java:28)
+	at ✽.user enters a valid email address.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F03-%20ResetPassword.feature:10)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+                <test-method duration-ms="347" finished-at="2024-10-07T09:29:39.367254200Z" name="user enters invalid not registered email address." started-at="2024-10-07T09:29:38.991272300Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user navigates to forget password webpage...............................passed
+When user enters an invalid email address...................................failed
+And user press on recover button............................................skipped
+Then user should not be able to reset password..............................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[class="email"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=input[class="email"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P03_login.loginEmailTxtFld(P03_login.java:17)
+	at TestCasesDefinitions.D03_resetPassword.user_enters_an_invalid_email_address(D03_resetPassword.java:50)
+	at ✽.user enters an invalid email address.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F03-%20ResetPassword.feature:16)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged User could search for any product">
+                <test-method duration-ms="56" finished-at="2024-10-07T09:29:39.447137Z" name="logged user should be able to search for any product." started-at="2024-10-07T09:29:39.390359600Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user uses the search text field and enters lenovo.......................failed
+Then user clicks on the search button.......................................skipped
+And user redirected to a search webpage with the text entered...............skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[class="search-box-text ui-autocomplete-input"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=input[class="search-box-text ui-autocomplete-input"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.searchTxtFld(P01_homePage.java:22)
+	at TestCasesDefinitions.D04_search.user_users_the_search_text_field_and_enters_lenovo(D04_search.java:15)
+	at ✽.user uses the search text field and enters lenovo.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F04-%20Search.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged User could switch between currencies US-Euro">
+                <test-method duration-ms="186" finished-at="2024-10-07T09:29:39.730605Z" name="logged user should be able to change currency from US Dollars to Euro &amp; back." started-at="2024-10-07T09:29:39.541455100Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user uses the search text field and enters lenovo.......................failed
+And user clicks on the search button........................................skipped
+And user press on currency list.............................................skipped
+And user chooses Euro currency..............................................skipped
+Then item price changes to Euros............................................skipped
+And user press on currency list.............................................skipped
+And user chooses USD currency...............................................skipped
+Then item price changes to USD..............................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[class="search-box-text ui-autocomplete-input"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=input[class="search-box-text ui-autocomplete-input"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.searchTxtFld(P01_homePage.java:22)
+	at TestCasesDefinitions.D04_search.user_users_the_search_text_field_and_enters_lenovo(D04_search.java:15)
+	at ✽.user uses the search text field and enters lenovo.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F05-%20CurrencyChange.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged user could select different Categories">
+                <test-method duration-ms="1586" finished-at="2024-10-07T09:29:41.321389700Z" name="logged user could select category (Computers) then subcategory (Desktops)" started-at="2024-10-07T09:29:39.730605Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user press on Computers from homepage...................................failed
+And user press on Desktops option...........................................skipped
+Then webpage redirects to Desktops subcategory..............................skipped
+And webpage shows a Desktop computer........................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul[class="top-menu notmobile"] > li > [href="/computers"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=ul[class="top-menu notmobile"] > li > [href="/computers"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.computersCategory(P01_homePage.java:34)
+	at TestCasesDefinitions.D06_categories.user_press_on_Computers_from_homepage(D06_categories.java:15)
+	at ✽.user press on Computers from homepage.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F06-%20Categories.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged user could filter with color">
+                <test-method duration-ms="275" finished-at="2024-10-07T09:29:41.617937800Z" name="logged user could filter with red colour in Shoes Subcategory." started-at="2024-10-07T09:29:41.330328800Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user press on Apparel from homepage.....................................failed
+And user press on Shoes subcategory.........................................skipped
+And user press on red checkbox..............................................skipped
+Then user gets Shoes options with red colour................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul[class="top-menu notmobile"] > li > a[href="/apparel"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=ul[class="top-menu notmobile"] > li > a[href="/apparel"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.apparelCategory(P01_homePage.java:46)
+	at TestCasesDefinitions.D07_filterWithColour.user_press_on_Apparel_from_homepage(D07_filterWithColour.java:19)
+	at ✽.user press on Apparel from homepage.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F07-%20FilterWithColour.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged user could select different tags.">
+                <test-method duration-ms="143" finished-at="2024-10-07T09:29:41.773506600Z" name="logged user could select different tags." started-at="2024-10-07T09:29:41.624578Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user press on Computers from homepage...................................failed
+And user press on awesome tag option........................................skipped
+Then webpage redirect to products tagged with awesome.......................skipped
+And text field containing products tagged with awesome shown................skipped
+Then user press on cool tag option..........................................skipped
+And webpage redirect to products tagged with cool...........................skipped
+And text field containing products tagged with cool shown...................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul[class="top-menu notmobile"] > li > [href="/computers"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=ul[class="top-menu notmobile"] > li > [href="/computers"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.computersCategory(P01_homePage.java:34)
+	at TestCasesDefinitions.D06_categories.user_press_on_Computers_from_homepage(D06_categories.java:15)
+	at ✽.user press on Computers from homepage.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F08-%20Tags.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged user could add different products to Shopping cart.">
+                <test-method duration-ms="160" finished-at="2024-10-07T09:29:41.947641700Z" name="Logged user add 2 products to shopping cart" started-at="2024-10-07T09:29:41.786Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user press on Computers from homepage...................................failed
+And user press on Desktops option...........................................skipped
+And user press add to cart on 2nd product choice twice......................skipped
+Then product has been added to cart message displayed.......................skipped
+And user press add to cart on the 3rd product choice........................skipped
+Then product has been added to cart message displayed.......................skipped
+And user press on shopping cart in header...................................skipped
+Then webpage redirect to shopping cart......................................skipped
+And 2nd product choice is displayed.........................................skipped
+And 3rd product choice is displayed.........................................skipped
+Then user changes quantity of the 2nd product to 5 pieces...................skipped
+And user press on update shopping cart button...............................skipped
+Then product subtotal changes...............................................skipped
+Then user press on remove button of 2nd product.............................skipped
+And user press on update shopping cart button...............................skipped
+And cart total changes after removal of 2nd product.........................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul[class="top-menu notmobile"] > li > [href="/computers"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=ul[class="top-menu notmobile"] > li > [href="/computers"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.computersCategory(P01_homePage.java:34)
+	at TestCasesDefinitions.D06_categories.user_press_on_Computers_from_homepage(D06_categories.java:15)
+	at ✽.user press on Computers from homepage.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F09-%20ShoppingCart.feature:13)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged user could add different products to Wishlist">
+                <test-method duration-ms="247" finished-at="2024-10-07T09:29:42.213328700Z" name="user adds two desktop products to his/her wishlist." started-at="2024-10-07T09:29:41.950914900Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user press on Computers from homepage...................................failed
+And user press on Desktops option...........................................skipped
+And user clicks on add to wishlist button for 2nd product...................skipped
+And product has been added to wishlist message displayed....................skipped
+And user clicks on add to wishlist button for 3rd product...................skipped
+And product has been added to wishlist message displayed....................skipped
+Then user press on wishlist in webpage header...............................skipped
+And webpage redirects to wishlist...........................................skipped
+And 2nd product is displayed................................................skipped
+And 3rd product is displayed................................................skipped
+Then user removes 2nd product from wishlist.................................skipped
+And 2nd product is removed from wishlist....................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul[class="top-menu notmobile"] > li > [href="/computers"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=ul[class="top-menu notmobile"] > li > [href="/computers"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.computersCategory(P01_homePage.java:34)
+	at TestCasesDefinitions.D06_categories.user_press_on_Computers_from_homepage(D06_categories.java:15)
+	at ✽.user press on Computers from homepage.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F10-%20Wishlist.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Logged user could add different products to compare list">
+                <test-method duration-ms="47" finished-at="2024-10-07T09:29:42.260525700Z" name="Logged user could add 2nd and 3rd computer desktops to his/her compare list." started-at="2024-10-07T09:29:42.213328700Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user press on Computers from homepage...................................failed
+And user press on Desktops option...........................................skipped
+And user press on 2nd product add to compare list button....................skipped
+Then product has been added to compare list message displayed...............skipped
+And user press on 3rd product add to compare list button....................skipped
+Then product has been added to compare list message displayed...............skipped
+And user press on product comparison in bar notification message............skipped
+Then user is redirected to compare products webpage.........................skipped
+And 2nd product is displayed in compare list................................skipped
+And 3rd product is displayed in compare list................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul[class="top-menu notmobile"] > li > [href="/computers"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=ul[class="top-menu notmobile"] > li > [href="/computers"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.computersCategory(P01_homePage.java:34)
+	at TestCasesDefinitions.D06_categories.user_press_on_Computers_from_homepage(D06_categories.java:15)
+	at ✽.user press on Computers from homepage.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F11-%20Comparelist.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+            <class name="Create successful Order">
+                <test-method duration-ms="346" finished-at="2024-10-07T09:29:42.627008Z" name="Logged user could make a successful order." started-at="2024-10-07T09:29:42.276492600Z" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message><![CDATA[And user press on Computers from homepage...................................failed
+And user press on Desktops option...........................................skipped
+And user press add to cart on 2nd product choice twice......................skipped
+And product has been added to cart message displayed........................skipped
+And user press add to cart on the 3rd product choice........................skipped
+And product has been added to cart message displayed........................skipped
+And user press on shopping cart in header...................................skipped
+And user press on agree with the terms of service checkbox..................skipped
+And user press on checkout button...........................................skipped
+Then user is redirected to checkout webpage.................................skipped
+And user selects Country as Egypt...........................................skipped
+And user enters Cairo as City...............................................skipped
+And user enters his or her address..........................................skipped
+And user enters zip or postal code..........................................skipped
+And user enters his or her phone number.....................................skipped
+And user press on shipping address continue button..........................skipped
+And user press on shipping method continue button...........................skipped
+And user press on payment method continue button............................skipped
+And user press on payment information continue button.......................skipped
+And user press on confirm button to confirm the order.......................skipped
+Then user is redirected to checkout completed webpage.......................skipped
+And order proceeded successfully message appears............................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul[class="top-menu notmobile"] > li > [href="/computers"]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad938b34e45cab9527aed19ee211981b, findElement {using=css selector, value=ul[class="top-menu notmobile"] > li > [href="/computers"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\tumelog\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65075}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65075/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad938b34e45cab9527aed19ee211981b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at nopCommercePages.P01_homePage.computersCategory(P01_homePage.java:34)
+	at TestCasesDefinitions.D06_categories.user_press_on_Computers_from_homepage(D06_categories.java:15)
+	at ✽.user press on Computers from homepage.(file:///C:/Users/tumelog/Desktop/E-Commerce-App-Automation-Testing/EcommerceAppAutomation/src/main/resources/Features/F12-%20SuccessfulOrder.feature:12)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+        </test>
+    </suite>
 </testng-results>

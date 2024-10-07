@@ -7,8 +7,10 @@ Feature: User could register with valid data
 
   # Test Scenario 1
   Scenario: user registers with valid data.
-    When user press on male checkbox.
-    And user enters valid first name.
+    When user enters valid first name.
+    And user press on male checkbox.
+
+
     And user enters valid last name.
     And user select valid date of birth.
     And user enters valid email address.
@@ -21,8 +23,9 @@ Feature: User could register with valid data
 
   # Test Scenario 2
   Scenario: user registers with invalid password.
-    When user press on male checkbox.
-    And user enters valid first name.
+
+    When user enters valid first name.
+    And user press on male checkbox.
     And user enters valid last name.
     And user select valid date of birth.
     And user enters valid email address.
